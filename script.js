@@ -14,7 +14,7 @@ function search() {
     
     // Check if input is empty
     if (input.trim() === '') {
-        alert("Please enter a search term."); // Optional alert for empty input
+        //alert("Por favor escribe"); // Optional alert for empty input
         document.getElementById('searchResults').style.display = 'none'; // Hide results section
         return; // Exit the function early
     }
@@ -40,8 +40,8 @@ function search() {
             const link = cells[2].innerText;
 
             // Create a new list item for the result in the desired format
-            const listItem = document.createElement('li');
-            listItem.innerHTML = `${formattedName} - ${formattedCategory} - <a href="${link}" target="_blank">Link</a>`;
+            const listItem = document.createElement('tr');
+            listItem.innerHTML = `<td style="border-bottom: 1px solid dimgray;"><a href="${link}" target="_blank">${formattedName} - ${formattedCategory}</a></td>`;
             resultsList.appendChild(listItem);
         }
     }
@@ -52,7 +52,7 @@ function search() {
         searchResultsSection.style.display = 'block';
     } else {
         searchResultsSection.style.display = 'none'; // Hide if no results found
-        alert("No results found.");
+        alert("No se encontraron resultados");
     }
 }
 

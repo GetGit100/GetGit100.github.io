@@ -332,6 +332,15 @@
             /*flex-direction: column; /* Places items in a column (one below the other) */
             text-align: center; /* Ensures any inline elements like text will also be centered */
         }
+        .center-container-header img {
+            max-width: 100%;
+            max-height: 100%;
+            position: relative;
+            top: 15%;
+            /*left: 50%;*/
+            /*transform: translate(-50%, -50%);*/
+            /*margin: 0;  Elimina el margin auto para evitar conflictos */
+        }         
         .center-container2 {
             display: flex; 
             justify-content: center; /* Centers items horizontally */
@@ -349,7 +358,7 @@
         }
         @media (max-width: 600px) {
             .center-text {
-                left: 27%;
+                left: 24%;
             }
         }              
         .center-container2 img {
@@ -606,9 +615,12 @@
     <!-- ************************************************************** -->
     <!-- D2 PROMO -->     
     <div class="center-container-bd" onclick="scrollToSection('d2')">
-        <svg id="d2_promo" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24">
+        <!--<svg id="d2_promo" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24">
             <path d="M5 12H4v8c0 1.104.896 2 2 2h5V12H6 5zM18 12h-5v10h5c1.104 0 2-.896 2-2v-8h-1H18zM18.791 7C18.922 6.589 19 6.096 19 5.5 19 3.57 17.43 2 15.5 2c-1.622 0-2.705 1.482-3.404 3.085C11.407 3.57 10.269 2 8.5 2 6.57 2 5 3.57 5 5.5 5 6.096 5.079 6.589 5.209 7H2v4h9V9h1 1v.091V11h9V7H18.791zM7 5.5C7 4.673 7.673 4 8.5 4c.888 0 1.714 1.525 2.198 3H8C7.626 7 7 7 7 5.5zM15.5 4C16.327 4 17 4.673 17 5.5 17 7 16.374 7 16 7h-2.477C14.033 5.424 14.774 4 15.5 4z"/>
-        </svg>
+        </svg>-->
+        <svg id="d2_promo" viewBox="0 0 576 512" height="100" width="100" xmlns="http://www.w3.org/2000/svg">
+            <path d="m569.517 440.013c18.458 31.994-4.711 71.987-41.577 71.987h-479.886c-36.937 0-59.999-40.055-41.577-71.987l239.946-416.028c18.467-32.009 64.72-31.951 83.154 0zm-281.517-86.013c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346 7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/>
+        </svg> 
     </div>
     <!-- ************************************************************** -->
     <!-- D3 ADMIN -->       
@@ -632,7 +644,8 @@
     <!-- Example section -->
     <script type='text/javascript'>
       function scrollToTop() {
-          window.scrollTo({ top:0, behavior:'smooth' });
+           window.scrollTo({ top:0, behavior:'smooth' });
+           //scrollToSection('topo');
       }
       function scrollToSection(sectionId) {
           const section = document.getElementById(sectionId);
@@ -942,9 +955,12 @@
    <!-- ************************************************************** -->
    <!-- D2 PROMO -->
    <div id='d2' class='info-section'>
-    <svg id="d2_promo2" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+    <!--<svg id="d2_promo2" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
         <path d="M5 12H4v8c0 1.104.896 2 2 2h5V12H6 5zM18 12h-5v10h5c1.104 0 2-.896 2-2v-8h-1H18zM18.791 7C18.922 6.589 19 6.096 19 5.5 19 3.57 17.43 2 15.5 2c-1.622 0-2.705 1.482-3.404 3.085C11.407 3.57 10.269 2 8.5 2 6.57 2 5 3.57 5 5.5 5 6.096 5.079 6.589 5.209 7H2v4h9V9h1 1v.091V11h9V7H18.791zM7 5.5C7 4.673 7.673 4 8.5 4c.888 0 1.714 1.525 2.198 3H8C7.626 7 7 7 7 5.5zM15.5 4C16.327 4 17 4.673 17 5.5 17 7 16.374 7 16 7h-2.477C14.033 5.424 14.774 4 15.5 4z"/>
-    </svg>
+    </svg>-->
+    <svg id="d2_promo2" viewBox="0 0 576 512" height="30" width="30" xmlns="http://www.w3.org/2000/svg">
+        <path d="m569.517 440.013c18.458 31.994-4.711 71.987-41.577 71.987h-479.886c-36.937 0-59.999-40.055-41.577-71.987l239.946-416.028c18.467-32.009 64.72-31.951 83.154 0zm-281.517-86.013c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346 7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/>
+    </svg>    
     <p class='center-text'>******** Avisos ********</p> 
     <span class='back-to-top' onclick='scrollToTop()'>
         <svg id="z_backtop8" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">

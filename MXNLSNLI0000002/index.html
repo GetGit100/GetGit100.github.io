@@ -358,7 +358,7 @@
         }
         @media (max-width: 600px) {
             .center-text {
-                left: 27%;
+                left: 24%;
             }
         }              
         .center-container2 img {
@@ -490,7 +490,7 @@
     <!-- ************************************************************** -->
     <!-- ************************************************************** -->
     <!-- ************************************************************** -->
-    <div class="grid-container-header" id='top'> 
+    <div id="topo" class="grid-container-header" id='top'> 
         <div class="grid-item-header" onclick="scrollToSection('none')"><img src="../img/pixel_white.png" alt="Image 1"></div>
         <!-- ************************************************************** -->
         <!-- COMPANY LOGO -->
@@ -638,6 +638,7 @@
     <script type='text/javascript'>
       function scrollToTop() {
           window.scrollTo({ top:0, behavior:'smooth' });
+          //scrollToSection('topo');
       }
       function scrollToSection(sectionId) {
           const section = document.getElementById(sectionId);
@@ -655,7 +656,7 @@
         <path d="m13.091 12c-5.021 0-9.091 4.477-9.091 10 0 4.701 2.952 8.633 6.926 9.703l3.074 12.297h12l-2.74-10.961 20.74 6.608v-35.647l-24 8zm4.032 28-2-8h3.754l2 8zm2.877-24v12h-6.909c-2.807 0-5.091-2.692-5.091-6s2.284-6 5.091-6zm20 18.174-16-5.098v-14.193l16-5.333z" fill="black"/>
        </svg>
        <p class='center-text'>****** Conócenos. ******</p>
-       <span class='back-to-top' onclick='scrollToTop()'>
+       <span class='back-to-top' onclick='scrollToTop()'>  
            <svg id="z_backtop1" height="30" viewBox="0 0 16 16" width="30" xmlns="http://www.w3.org/2000/svg">
             <path d="m16 8c0-5-4.9-5-4.9-5h-5.1v-3l-6 6 6 6v-3h5.2c3.5 0 1.8 7 1.8 7s3-4.1 3-8z" fill="black"/>
            </svg>

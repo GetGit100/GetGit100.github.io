@@ -51,83 +51,51 @@
     <!-- MAIN TITLE -->
     <table style="border-collapse: collapse; width: 50%; margin: auto;">
         <tr>
-            <td class="text-balls">Precios y Servicios</td> 
+            <td class="text-balls">Términos y Condiciones</td> 
     </table>
 
 <!-- Pricing Table Section -->
 <div id="tabla" class="pricing-table-container">
-    <!-- Radio buttons for selection -->
-    <div class="radio-buttons-container">
-        <input type="radio" id="monthly" name="billing" value="monthly" checked onclick="updatePrices()"> 
-        <label for="monthly">Mensual</label>
-        <input type="radio" id="annual" name="billing" value="annual" onclick="updatePrices()"> 
-        <label for="annual">Anual</label>
-    </div>
-
-    <!-- Pricing Table -->
-    <table class="pricing-table">
-        <thead>
-            <tr>
-                <th>Básico</th>
-                <th>Intermedio</th>
-                <th>Avanzado</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Row for pricing -->
-            <tr>
-                <td id="basic-price">Gratis</td>
-                <td id="intermediate-price">100 MXN</td>
-                <td id="advanced-price">1,000 MXN</td>
-            </tr>
-        </tbody>
-    </table>
 
     <!-- Features section outside the table -->
     <div class="features">
         <div class="column">
             <ul>
-                <li>Editar Textos</li>
-                <li>Editar Imágenes</li>
-                <li>Editar Horarios</li>
-            </ul>
-        </div>
-        <div class="column">
-            <ul>
-                <li>Editar Textos</li>
-                <li>Editar Imágenes</li>
-                <li>Editar Horarios</li>
-                <li>Correo @MiLocal.com</li>
-                <li>Dominio URL</li>
-            </ul>
-        </div>
-        <div class="column">
-            <ul>
-                <li>Editar Textos</li>
-                <li>Editar Imágenes</li>
-                <li>Editar Horarios</li>
-                <li>Correo @MiLocal.com</li>
-                <li>Dominio URL</li>
-                <li>Total Visitas</li>
-                <li>Browser usado</li>
-                <li>Equipo usado</li>
-                <li>Análisis Tráfico</li>
+                Última actualización: 1 de Diciembre de 2024
+                <br><br>
+                <b>1. Aceptación de los Términos</b><br>
+                Al acceder y utilizar este sitio web, usted acepta estar sujeto a estos Términos y Condiciones, así como a cualquier ley o reglamento aplicable. Si no está de acuerdo con alguno de estos términos, debe cesar inmediatamente el uso de este sitio.
+                <br><br>
+                <b>2. Proveedores de Productos y Servicios</b><br>
+                Este sitio web actúa como un intermediario entre los usuarios y los proveedores de productos y servicios.
+                <br><br>
+                Responsabilidad de los Proveedores:<br>
+                Los productos, servicios, precios, descripciones, disponibilidad y cualquier otra información proporcionada en esta página son responsabilidad exclusiva del proveedor respectivo. Cualquier transacción, disputa o reclamo que surja en relación con un producto o servicio debe ser tratado directamente con el proveedor correspondiente.
+                <br><br>
+                Sin Garantías:<br>
+                No garantizamos la calidad, precisión, confiabilidad, o disponibilidad de los productos y servicios ofrecidos por terceros.
+                <br><br>
+                <b>3. Exclusión de Responsabilidad</b><br>
+                En la medida máxima permitida por la ley, los creadores de este sitio no serán responsable por daños directos, indirectos, incidentales o consecuentes que puedan derivarse del uso de este sitio web o de los productos y servicios adquiridos a través de los proveedores aquí listados.
+                <br><br>
+                <b>4. Contenido del Sitio</b><br>
+                Toda la información publicada en este sitio es proporcionada "tal cual" y "según disponibilidad." Nos reservamos el derecho de modificar o eliminar cualquier contenido en cualquier momento sin previo aviso.
+                <br><br>
+                <b>5. Enlaces a Terceros</b><br>
+                Este sitio puede contener enlaces a sitios web de terceros. No controlamos ni somos responsables del contenido, políticas de privacidad o prácticas de dichos sitios. El acceso a estos enlaces es bajo su propio riesgo.
+                <br><br>
+                <b>6. Modificaciones a los Términos y Condiciones</b><br>
+                Nos reservamos el derecho de actualizar o modificar estos Términos y Condiciones en cualquier momento. Se recomienda revisar esta sección periódicamente para estar al tanto de cualquier cambio.
+                <br><br>
+                <b>7. Contacto</b><br>
+                Si tiene alguna pregunta o inquietud sobre estos Términos y Condiciones, puede comunicarse con nosotros a través de los medios correspondientes.
+                <br><br><br>
+                <b>Atentamente el equipo de MiLocal.com </b>
+                <br><br><br>
             </ul>
         </div>
     </div>
 
-    <!-- Register buttons -->
-    <div class="register-button-container">
-        <div class="register-wrapper">
-            <a href="#" class="register-button">¡Registrate aquí!</a>
-        </div>
-        <div class="register-wrapper">
-            <a href="#" class="register-button">¡Registrate aquí!</a>
-        </div>
-        <div class="register-wrapper">
-            <a href="#" class="register-button">¡Registrate aquí!</a>
-        </div>
-    </div>
 </div>
 
 </body>
@@ -161,25 +129,6 @@
             23: [false, false, false, false, false, false, false]  // 23:00 - 23:59
         }
 
-        function updatePrices() {
-            const basicPrice = document.getElementById("basic-price");
-            const intermediatePrice = document.getElementById("intermediate-price");
-            const advancedPrice = document.getElementById("advanced-price");
-
-            // Obtener el valor del radio button seleccionado
-            const billingType = document.querySelector('input[name="billing"]:checked').value;
-
-            if (billingType === "annual") {
-                // Actualizar los precios a anuales
-                intermediatePrice.textContent = "1,200 MXN";
-                advancedPrice.textContent = "12,000 MXN";
-            } else {
-                // Volver a los precios mensuales
-                intermediatePrice.textContent = "100 MXN";
-                advancedPrice.textContent = "1,000 MXN";
-            }
-        }
-
         function goToParentIndex() {
         // Navegar un nivel hacia arriba y abrir index.html
         window.location.href = "../index.html";
@@ -195,35 +144,7 @@
             document.body.style.backgroundColor = estiloCambiado ? "white" : "black";
             document.body.style.color = estiloCambiado ? "black" : "white";
 
-            // Cambiar el fondo y color de la tabla principal con id "tabla"
-            const tablaPrincipal = document.getElementById("tabla");
-            if (tablaPrincipal) {
-                tablaPrincipal.style.backgroundColor = estiloCambiado ? "white" : "black";
-                tablaPrincipal.style.color = estiloCambiado ? "black" : "white";
-            }
 
-            // Cambiar el fondo de la tabla de precios interna
-            const tablaPrecios = document.querySelector(".pricing-table");
-            if (tablaPrecios) {
-                tablaPrecios.style.backgroundColor = estiloCambiado ? "white" : "black";
-                tablaPrecios.style.color = estiloCambiado ? "black" : "white";
-            }
-
-            // Cambiar color del texto y fondo de cada celda en la tabla de precios
-            const celdas = tablaPrecios.querySelectorAll("th, td");
-            celdas.forEach((celda) => {
-                celda.style.backgroundColor = estiloCambiado ? "white" : "black";
-                celda.style.color = estiloCambiado ? "black" : "white";
-                celda.style.borderColor = estiloCambiado ? "black" : "white"; // Cambiar borde de las celdas
-            });
-
-            // Cambiar estilos de los radio buttons y sus etiquetas
-            const radios = document.querySelectorAll("input[type='radio'] + label");
-            radios.forEach((radio) => {
-                radio.style.backgroundColor = estiloCambiado ? "white" : "black";
-                radio.style.color = estiloCambiado ? "black" : "white";
-                radio.style.border = `1px solid ${estiloCambiado ? "black" : "white"}`;
-            });
 
             // Cambiar bordes de imágenes
             const images = document.querySelectorAll("img");
@@ -232,6 +153,12 @@
             });
 
 
+            // Cambiar el fondo y color de la tabla principal con id "tabla"
+            const tablaPrincipal = document.getElementById("tabla");
+            if (tablaPrincipal) {
+                tablaPrincipal.style.backgroundColor = estiloCambiado ? "white" : "black";
+                tablaPrincipal.style.color = estiloCambiado ? "black" : "white";
+            }
 
             const paths = document.querySelectorAll('#backmain path');
             paths[1].setAttribute('fill', estiloCambiado ? 'black' : 'white');
@@ -240,12 +167,6 @@
             document.getElementById('moon').querySelector('path').setAttribute('fill', estiloCambiado ? 'black' : 'white');
             document.getElementById('sun').querySelector('line').setAttribute('stroke', estiloCambiado ? 'black' : 'white');
             document.getElementById('backmain').querySelector('path').setAttribute('fill', estiloCambiado ? 'black' : 'white');
-            // Forzar colores en SVG
-            //const svgPaths = document.querySelectorAll("svg path, svg line");
-            //svgPaths.forEach((path) => {
-            //    path.setAttribute("fill", estiloCambiado ? "black" : "white");
-            //    path.setAttribute("stroke", estiloCambiado ? "black" : "white");
-            //});
 
             estiloCambiado = !estiloCambiado; // Alternar estado
         }
